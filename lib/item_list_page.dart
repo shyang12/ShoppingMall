@@ -12,13 +12,12 @@ class ItemListPage extends StatefulWidget {
 
 class _ItemListPageState extends State<ItemListPage> {
   final NumberFormat numberFormat = NumberFormat('###,###,###,###');
-
   List<Product> productList = [
     Product(
-      productNo: 1,
-      productName: "노트북(Laptop)",
-      productImageUrl: "https://picsum.photos/id/1/300/300",
-      price: 600000),
+        productNo: 1,
+        productName: "노트북(Laptop)",
+        productImageUrl: "https://picsum.photos/id/1/300/300",
+        price: 600000),
     Product(
         productNo: 2,
         productName: "스마트폰(Phone)",
@@ -37,12 +36,12 @@ class _ItemListPageState extends State<ItemListPage> {
     Product(
         productNo: 5,
         productName: "포도(Grape)",
-        productImageUrl: "https://picsum.photos/id/75/300/300",
+        productImageUrl: "https://picsum.photos/id/75/200/300",
         price: 75000),
     Product(
         productNo: 6,
-        productName: "책(Book)",
-        productImageUrl: "https://picsum.photos/id/24/300/300",
+        productName: "책(book)",
+        productImageUrl: "https://picsum.photos/id/24/200/300",
         price: 24000),
   ];
 
@@ -56,8 +55,10 @@ class _ItemListPageState extends State<ItemListPage> {
       body: GridView.builder(
         itemCount: productList.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            childAspectRatio: 0.9,
-            crossAxisCount: 2),
+          childAspectRatio: 0.8,
+          crossAxisCount: 2,
+          // mainAxisExtent: 250,
+        ),
         itemBuilder: (context, index) {
           return productContainer(
               productName: productList[index].productName ?? "",
@@ -70,36 +71,38 @@ class _ItemListPageState extends State<ItemListPage> {
 
   Widget productContainer(
       {required String productName,
-      required String productImageUrl,
-      required double price}) {
+        required String productImageUrl,
+        required double price}) {
     return Container(
       padding: const EdgeInsets.all(5),
       child: Column(
         children: [
           CachedNetworkImage(
-              height: 150,
-              fit: BoxFit.cover,
-              imageUrl: productImageUrl,
-              placeholder: (context, url) {
-                return const Center(
-                  child: CircularProgressIndicator(
-                    strokeWidth: 2,
-                  ),
-                );
-              },
+            height: 150,
+            fit: BoxFit.cover,
+            imageUrl: productImageUrl,
+            placeholder: (context, url) {
+              return const Center(
+                child: CircularProgressIndicator(
+                  strokeWidth: 2,
+                ),
+              );
+            },
             errorWidget: (context, url, error) {
-                return const Center(
-                  child: Text("오류 발생"),
-                );
+              return const Center(
+                child: Text("오류 발생"),
+              );
             },
           ),
+
           Container(
             padding: const EdgeInsets.all(8),
             child: Text(productName,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-              )),
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                )),
           ),
+
           Container(
             padding: const EdgeInsets.all(8),
             child: Text("${numberFormat.format(price)}원"),
@@ -109,5 +112,6 @@ class _ItemListPageState extends State<ItemListPage> {
     );
   }
 }
+
 
 
