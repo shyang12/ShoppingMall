@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:shoppingmall/item_checkout_page.dart';
 import 'package:shoppingmall/models/product.dart';
 import 'constants.dart';
 
@@ -62,7 +63,14 @@ class _ItemBasketPageState extends State<ItemBasketPage> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(20),
         child: FilledButton(
-          onPressed: () {},
+          onPressed: () {
+            // 결제시작 페이지로 이동
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) {
+                  return const ItemCheckoutPage();
+                },
+            ));
+          },
           child: Text("총 ${numberFormat.format(totalPrice)}원 결제하기"),
         ),
       ),
