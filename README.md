@@ -47,3 +47,7 @@
 ```
 
 ## 4. Result
+- 제품 리스트 페이지
+
+![제품 리스트](https://github.com/shyang12/ShoppingMall/assets/85710913/f9597257-c7ea-4619-90ef-ffd443dad152)
+
