@@ -24,7 +24,7 @@
 │   ├── main.dart
 │   ├── item_list_page.dart
 │   ├── item_details_page.dart
-│   ├── item_details_page.dart
+│   ├── item_basket_page.dart
 │   ├── item_details_page.dart
 │   └── constants.dart
 ├── model
@@ -43,8 +43,8 @@
 ### 3.2 Firestore Database
 ```bash
 ├── users
-│    ├── channel
-│    └── email
+│    ├── 
+│    └── 
 
 ```
 
@@ -56,3 +56,5 @@
 - 제품 상세 페이지
 
 ![제품 상세 페이지](https://github.com/shyang12/ShoppingMall/assets/85710913/cd3fe7f3-33f5-4c11-bd7d-fc450cd73175)
+
+- 장바구니 페이지
