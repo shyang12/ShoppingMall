@@ -23,8 +23,10 @@
 ├── main
 │   ├── main.dart
 │   ├── item_list_page.dart
-│   ├── UserDTO.kt
-│   └── VideoActivity.kt
+│   ├── item_details_page.dart
+│   ├── item_details_page.dart
+│   ├── item_details_page.dart
+│   └── constants.dart
 ├── model
 │   ├── product.dart
 ├── UI
@@ -51,3 +53,6 @@
 
 ![제품 리스트](https://github.com/shyang12/ShoppingMall/assets/85710913/f9597257-c7ea-4619-90ef-ffd443dad152)
 
+- 제품 상세 페이지
+
+![제품 상세 페이지](https://github.com/shyang12/ShoppingMall/assets/85710913/cd3fe7f3-33f5-4c11-bd7d-fc450cd73175)
