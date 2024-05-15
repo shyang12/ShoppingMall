@@ -12,11 +12,17 @@
 - Firebase
 - GitHub
 
-### 1. 2 Implement
-- 구글 로그인을 통한 User 이메일 출력 `Firebase Authentication + Firestore Database`
-- User 이메일을 터치하여 화상 채팅 수행 `Remotemonster`
-- Alert를 통해 채팅방 참여 여부 결정
-- Random값 (100 ~ 1000000)까지의 채널을 만들어 화상 통화방이 겹치는 것 방지
+### 1. 2 Driving
+- Android
+- IOS
+- WEB
+- Window
+
+### 1. 3 Implement
+- 상품 리스트를 ScrollView를 통해 상품 사진, 상품명, 가격등 정보 제공 
+- 제품의 상세 페이지를 통해 제품의 상세 내용 제공
+- 장바구니 기능을 통해 상품 개수 추가 or 감소, 삭제등 구매하기 전 장바구니 기능
+- 우편번호(주소) API를 사용하여 사용자에게 택배 보낼 주소 저장 기능 
 
 ## 2. Project Architecture   
 ```bash
@@ -32,6 +38,8 @@
 │   └── constants.dart
 ├── model
 │   ├── product.dart
+├── model
+│   ├── basic_dialog.dart
 ├── UI
 │   ├── layout
 │   │   ├── item_person.xml
@@ -68,3 +76,8 @@
 - 결제시작 페이지
 
 ![결제시작](https://github.com/shyang12/ShoppingMall/assets/85710913/6884b830-3516-477e-af55-85a29d4adb80)
+
+- 주소 검색 API 추가
+
+![주소 검색](https://github.com/shyang12/ShoppingMall/assets/85710913/a484eeec-b3a3-4226-b425-d941482d0db7)
+
