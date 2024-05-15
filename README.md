@@ -3,7 +3,7 @@
  
  - 안드로이드 스튜디오에서 Flutter(dart)를 기반으로 쇼핑몰 앱을 구현하는 프로젝트
 
-`DataBinding` `Firebase` `Firestore Database` `Remotemonster`
+`kpostal (우편주소 API)` `Firebase` `Firestore Database` `Remotemonster`
 
 ## 1. Co-Development Environment   
 ### 1. 1 Environments
@@ -32,13 +32,13 @@
 │   ├── item_details_page.dart
 │   ├── item_basket_page.dart
 │   ├── item_checkout_page.dart
-│   ├── item_checkout_page.dart
+│   ├── item_order_result_page.dart
 │   ├── item_checkout_page.dart
 │   ├── item_checkout_page.dart
 │   └── constants.dart
 ├── model
 │   ├── product.dart
-├── model
+├── components
 │   ├── basic_dialog.dart
 ├── UI
 │   ├── layout
@@ -75,7 +75,8 @@
 
 - 결제시작 페이지
 
-![결제시작](https://github.com/shyang12/ShoppingMall/assets/85710913/6884b830-3516-477e-af55-85a29d4adb80)
+![결제시작](https://github.com/shyang12/ShoppingMall/assets/85710913/6884b830-3516-477e-af55-85a29d4adb80)  ![결제수단 상세](https://github.com/shyang12/ShoppingMall/assets/85710913/11f6be4e-fad1-4619-9e92-dbc539ed4e67)
+
 
 - 주소 검색 API 추가
 
