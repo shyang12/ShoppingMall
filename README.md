@@ -38,6 +38,8 @@
 │   └── constants.dart
 ├── model
 │   ├── product.dart
+├── model
+│   ├── basic_dialog.dart
 ├── UI
 │   ├── layout
 │   │   ├── item_person.xml
