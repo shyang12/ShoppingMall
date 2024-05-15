@@ -25,7 +25,10 @@
 │   ├── item_list_page.dart
 │   ├── item_details_page.dart
 │   ├── item_basket_page.dart
-│   ├── item_details_page.dart
+│   ├── item_checkout_page.dart
+│   ├── item_checkout_page.dart
+│   ├── item_checkout_page.dart
+│   ├── item_checkout_page.dart
 │   └── constants.dart
 ├── model
 │   ├── product.dart
@@ -58,3 +61,10 @@
 ![제품 상세 페이지](https://github.com/shyang12/ShoppingMall/assets/85710913/cd3fe7f3-33f5-4c11-bd7d-fc450cd73175)
 
 - 장바구니 페이지
+
+![장바구니](https://github.com/shyang12/ShoppingMall/assets/85710913/849f9d7b-eb4e-441c-b5ca-c5e4ab729b48)
+
+
+- 결제시작 페이지
+
+![결제시작](https://github.com/shyang12/ShoppingMall/assets/85710913/6884b830-3516-477e-af55-85a29d4adb80)
