@@ -187,7 +187,15 @@ class _ItemCheckoutPageState extends State<ItemCheckoutPage> {
                 }
                 Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) {
-                  return const ItemOrderResultPage();
+                  return ItemOrderResultPage(
+                    paymentMethod: selectedPaymentMethod,
+                    paymentAmount: totalPrice,
+                    receiverName: receiverNameController.text,
+                    receiverPhone: receiverPhoneController.text,
+                    zip: receiverZipController.text,
+                    address1: receiverAddress1Controller.text,
+                    address2: receiverAddress2Controller.text,
+                  );
                 },
               ));
             }
