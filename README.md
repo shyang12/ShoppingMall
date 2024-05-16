@@ -44,12 +44,6 @@
 ├── enums
 │   ├── delivery_status.dart
 │   └── payment_status.dart
-├── UI
-│   ├── layout
-│   │   ├── item_person.xml
-│   │   ├── activity_video.xml
-│   │   ├── activity_login.xml
-│   │   └── activity_main.xml
 ```
 
 ## 3. Firebase   
