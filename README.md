@@ -3,7 +3,7 @@
  
  - 안드로이드 스튜디오에서 Flutter(dart)를 기반으로 쇼핑몰 앱을 구현하는 프로젝트
 
-`DataBinding` `Firebase` `Firestore Database` `Remotemonster`
+`kpostal (우편주소 API)` `Firebase` `Firestore Database` `Remotemonster`
 
 ## 1. Co-Development Environment   
 ### 1. 1 Environments
@@ -22,7 +22,8 @@
 - 상품 리스트를 ScrollView를 통해 상품 사진, 상품명, 가격등 정보 제공 
 - 제품의 상세 페이지를 통해 제품의 상세 내용 제공
 - 장바구니 기능을 통해 상품 개수 추가 or 감소, 삭제등 구매하기 전 장바구니 기능
-- 우편번호(주소) API를 사용하여 사용자에게 택배 보낼 주소 저장 기능 
+- 우편번호(주소) API를 사용하여 사용자에게 택배 보낼 주소 저장 기능
+- 주문완료 페이지를 통해 최종 결제
 
 ## 2. Project Architecture   
 ```bash
@@ -32,13 +33,13 @@
 │   ├── item_details_page.dart
 │   ├── item_basket_page.dart
 │   ├── item_checkout_page.dart
-│   ├── item_checkout_page.dart
+│   ├── item_order_result_page.dart
 │   ├── item_checkout_page.dart
 │   ├── item_checkout_page.dart
 │   └── constants.dart
 ├── model
 │   ├── product.dart
-├── model
+├── components
 │   ├── basic_dialog.dart
 ├── UI
 │   ├── layout
@@ -75,9 +76,15 @@
 
 - 결제시작 페이지
 
-![결제시작](https://github.com/shyang12/ShoppingMall/assets/85710913/6884b830-3516-477e-af55-85a29d4adb80)
+![결제시작](https://github.com/shyang12/ShoppingMall/assets/85710913/6884b830-3516-477e-af55-85a29d4adb80)    ![결제수단 상세](https://github.com/shyang12/ShoppingMall/assets/85710913/11f6be4e-fad1-4619-9e92-dbc539ed4e67)
+
 
 - 주소 검색 API 추가
 
 ![주소 검색](https://github.com/shyang12/ShoppingMall/assets/85710913/a484eeec-b3a3-4226-b425-d941482d0db7)
+
+- 주문완료 페이지
+
+![주문완료](https://github.com/shyang12/ShoppingMall/assets/85710913/1f160e00-a96a-41a4-beab-994c417a720d)
+
 
