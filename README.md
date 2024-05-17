@@ -65,7 +65,8 @@
 
 - 제품 상세 페이지
 
-![제품 상세 페이지](https://github.com/shyang12/ShoppingMall/assets/85710913/cd3fe7f3-33f5-4c11-bd7d-fc450cd73175)
+![제품 상세](https://github.com/shyang12/ShoppingMall/assets/85710913/d6a00a21-49c7-4d1d-a54a-9287518b224b)
+
 
 - 장바구니 페이지
 
