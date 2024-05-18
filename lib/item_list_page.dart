@@ -4,7 +4,8 @@ import 'package:shoppingmall/item_basket_page.dart';
 import 'package:shoppingmall/item_details_page.dart';
 import 'package:shoppingmall/models/product.dart';
 import 'package:shoppingmall/my_order_list_page.dart';
-import 'constants.dart';
+import 'package:shoppingmall/constants.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ItemListPage extends StatefulWidget {
   const ItemListPage({super.key});
@@ -14,6 +15,11 @@ class ItemListPage extends StatefulWidget {
 }
 
 class _ItemListPageState extends State<ItemListPage> {
+  final productListRef = FirebaseFirestore.instance
+      .collection("products")
+      .withConverter(
+      fromFirestore: (snapshot, _) => Product.fromJson(snapshot.data()!),
+      toFirestore: (product, _) => product.toJson());
 
   List<Product> productList = [
     Product(
@@ -81,21 +87,36 @@ class _ItemListPageState extends State<ItemListPage> {
           ),
         ],
       ),
-      body: GridView.builder(
-        itemCount: productList.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          childAspectRatio: 0.8,
-          crossAxisCount: 2,
-          // mainAxisExtent: 250,
-        ),
-        itemBuilder: (context, index) {
-          return productContainer(
-            productNo: productList[index].productNo ?? 0,
-              productName: productList[index].productName ?? "",
-              productImageUrl: productList[index].productImageUrl ?? "",
-              price: productList[index].price ?? 0);
-        },
-      ),
+      body: StreamBuilder(
+        stream: productListRef.orderBy("productNo").snapshots(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return GridView(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    childAspectRatio: 0.8, crossAxisCount: 2),
+            children: snapshot.data!.docs.map((document) {
+              return productContainer(
+                  productNo: document.data().productNo ?? 0,
+                  productName: document.data().productName ?? "",
+                  productImageUrl: document.data().productImageUrl ?? "",
+                  price: document.data().price ?? 0,
+                );
+              }).toList(),
+            );
+          } else if (snapshot.hasError) {
+            return const Center(
+              child: Text(
+                "오류가 발생했습니다.",
+              ),
+            );
+          } else {
+            return const Center(
+              child: CircularProgressIndicator(
+                strokeWidth: 2,
+              ),
+            );
+          }
+        }),
     );
   }
 

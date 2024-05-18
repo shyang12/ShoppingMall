@@ -13,13 +13,14 @@ class Product {
     this.price
   });
 
-  Product.fromJson(Map<String, dynamic> json) {
-    productNo = int.parse(json['productNo']);
-    productName = json['productName'];
-    productDetails = json['productDetails'];
-    productImageUrl = json['productImageUrl'];
-    price = double.parse(json['price']);
-  }
+  Product.fromJson(Map<String, dynamic> json)
+    : this(
+        productNo: json['productNo'] as int,
+        productName: json['productName'] as String,
+        productImageUrl: json['productImageUrl'] as String,
+        price: (json['price'] as int).toDouble(),
+    );
+
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = {};
