@@ -54,8 +54,8 @@ class ProductOrder {
     userPwd = json['userPwd'];
     paymentMethod = json['paymentMethod'];
     quantity = json['quantity'];
-    unitPrice = double.parse(json['unitPrice']);
-    totalPrice = double.parse(json['totalPrice']);
+    unitPrice = json['unitPrice'];
+    totalPrice = json['totalPrice'];
     paymentStatus = json['paymentStatus'];
     deliveryStatus = json['deliveryStatus'];
   }
