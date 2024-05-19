@@ -3,7 +3,9 @@
  
  - 안드로이드 스튜디오에서 Flutter(dart)를 기반으로 쇼핑몰 앱을 구현하는 프로젝트
 
-`kpostal (우편주소 API)` `Firebase` `Firestore Database` `Remotemonster`
+`kpostal (우편주소 API)` `Firebase` `Firestore Database`
+
+# ▶ PG 결제 시스템, 배송 조회등 기능 뺴고 구현
 
 ## 1. Co-Development Environment   
 ### 1. 1 Environments
@@ -23,6 +25,7 @@
 - 제품의 상세 페이지를 통해 제품의 상세 내용 제공
 - 장바구니 기능을 통해 상품 개수 추가 or 감소, 삭제등 구매하기 전 장바구니 기능
 - 우편번호(주소) API를 사용하여 사용자에게 택배 보낼 주소 저장 기능
+- 주문목록에서 주문날짜, 주분정보, 주문취소, 배송조회등의 기능
 - 주문완료 페이지를 통해 최종 결제
 
 ## 2. Project Architecture   
@@ -35,7 +38,6 @@
 │   ├── item_checkout_page.dart
 │   ├── item_order_result_page.dart
 │   ├── my_order_list_page.dart
-│   ├── item_checkout_page.dart
 │   └── constants.dart
 ├── model
 │   ├── product.dart
@@ -51,10 +53,30 @@
 
 ### 3.2 Firestore Database
 ```bash
-├── users
-│    ├── 
-│    └── 
-
+├── orders
+│    ├── buyerEmail
+│    ├── buyerName
+│    ├── buyerPhone
+│    ├── deliveryStatus
+│    ├── orderDate
+│    ├── orderNo
+│    ├── paymentMethod
+│    ├── paymentStatus
+│    ├── productNo
+│    ├── quantity
+│    ├── receiverAddress1
+│    ├── receiverAddress2
+│    ├── receiverName
+│    ├── receiverPhone
+│    ├── receiverZip
+│    ├── totalPrice
+│    ├── unitPrice
+│    └── userPwd
+├── products
+│    ├── price
+│    ├── productImageUrl
+│    ├── productName
+│    └── productNo
 ```
 
 ## 4. Result
