@@ -5,7 +5,7 @@
 
 `kpostal (우편주소 API)` `Firebase` `Firestore Database` `SHA-256`
 
-# ▶ PG 결제 시스템, 배송 조회등 기능 뺴고 구현
+# ▶ PG 결제 시스템, 배송 조회등의 기능 제외하고 구현
 
 ## 1. Co-Development Environment   
 ### 1. 1 Environments
