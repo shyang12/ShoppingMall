@@ -3,7 +3,7 @@
  
  - 안드로이드 스튜디오에서 Flutter(dart)를 기반으로 쇼핑몰 앱을 구현하는 프로젝트
 
-`kpostal (우편주소 API)` `Firebase` `Firestore Database`
+`kpostal (우편주소 API)` `Firebase` `Firestore Database` `SHA-256`
 
 # ▶ PG 결제 시스템, 배송 조회등 기능 뺴고 구현
 
