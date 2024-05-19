@@ -41,6 +41,7 @@
 │   └── constants.dart
 ├── model
 │   ├── product.dart
+│   └── order.dart
 ├── components
 │   ├── basic_dialog.dart
 ├── enums
