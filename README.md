@@ -50,9 +50,7 @@
 ```
 
 ## 3. Firebase   
-### 3.1 Authentication
-
-### 3.2 Firestore Database
+### 3.1 Firestore Database
 ```bash
 ├── orders
 │    ├── buyerEmail
